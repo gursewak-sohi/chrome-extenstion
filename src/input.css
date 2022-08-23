@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+  }
+}
+
 * {
   @apply antialiased;
 }
