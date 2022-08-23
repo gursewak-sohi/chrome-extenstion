@@ -51,13 +51,16 @@
             modalItem = document.querySelector(modalID),
             contentItem = document.querySelector(contentID);
         if (modalLink && modalItem && contentItem) {
-            modalLink.onclick = () => {
-
+            modalLink.onclick = (e) => {
+                e.stopPropagation();
                 modalItem.classList.remove('opacity-0');
                 modalItem.classList.remove('invisible');
                 contentItem.classList.remove('opacity-0');
                 contentItem.classList.remove('translate-y-4');
                 contentItem.classList.remove('scale-95');
+            }
+            contentItem.onclick = (e) => {
+                e.stopPropagation();
             }
         }
     }
@@ -77,7 +80,17 @@
                 contentItem.classList.add('translate-y-4');
                 contentItem.classList.add('scale-95');
             }
+            document.onclick = () => {
+                modalItem.classList.add('opacity-0');
+                modalItem.classList.add('invisible');
+                contentItem.classList.add('opacity-0');
+                contentItem.classList.add('translate-y-4');
+                contentItem.classList.add('scale-95');
+            }
         }
     }
     closeModal('#closeBtn', '#modal', '#modalContent');
+
+
+
 })();
