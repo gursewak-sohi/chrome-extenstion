@@ -977,6 +977,10 @@ video {
   opacity: 0;
 }
 
+.opacity-100 {
+  opacity: 1;
+}
+
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -1037,12 +1041,20 @@ video {
   transition-duration: 300ms;
 }
 
+.duration-1000 {
+  transition-duration: 1000ms;
+}
+
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ease-linear {
+  transition-timing-function: linear;
 }
 
 .scrollbar-thin {
@@ -1077,8 +1089,24 @@ video {
   height: 8px;
 }
 
+.scrollbar-track-transparent {
+  --scrollbar-track: transparent !important;
+}
+
 .scrollbar-track-white {
   --scrollbar-track: #fff !important;
+}
+
+.scrollbar-thumb-slate-\32 00 {
+  --scrollbar-thumb: #e2e8f0 !important;
+}
+
+.scrollbar-thumb-slate-\33 00 {
+  --scrollbar-thumb: #cbd5e1 !important;
+}
+
+.scrollbar-thumb-slate-\34 00 {
+  --scrollbar-thumb: #94a3b8 !important;
 }
 
 .scrollbar-thumb-slate-\39 00 {

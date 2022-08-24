@@ -58,6 +58,7 @@
                 contentItem.classList.remove('opacity-0');
                 contentItem.classList.remove('translate-y-4');
                 contentItem.classList.remove('scale-95');
+                loadingAnimation('#lottieAnim');
             }
             contentItem.onclick = (e) => {
                 e.stopPropagation();
@@ -92,5 +93,15 @@
     closeModal('#closeBtn', '#modal', '#modalContent');
 
 
+    // Lottie Animation Loading
+    const loadingAnimation = (loadingID) => {
+        let loadingItem = document.querySelector(loadingID);
+        if (loadingItem) {
+            setTimeout(() => {
+                loadingItem.classList.add('opacity-0');
+                loadingItem.classList.add('invisible');
+            }, 3000);
+        }
+    }
 
 })();
